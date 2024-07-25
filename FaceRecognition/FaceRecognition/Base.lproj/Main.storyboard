@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nme-23-Jp1">
+                                <rect key="frame" x="140" y="409" width="111" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="IRr-50-CI5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Giriş"/>
+                                <connections>
+                                    <action selector="girisButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SmD-JU-viA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMy-Hf-S8o">
+                                <rect key="frame" x="140" y="527" width="111" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IMy-Hf-S8o" firstAttribute="top" secondItem="nme-23-Jp1" secondAttribute="bottom" constant="82" id="7hJ-Tx-zRC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IMy-Hf-S8o" secondAttribute="bottom" constant="253" id="Fas-MY-pUN"/>
+                            <constraint firstItem="nme-23-Jp1" firstAttribute="leading" secondItem="IMy-Hf-S8o" secondAttribute="leading" id="TTA-tP-oGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nme-23-Jp1" secondAttribute="trailing" constant="142" id="TzY-dG-reO"/>
+                            <constraint firstItem="nme-23-Jp1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="mXi-8h-pgc"/>
+                            <constraint firstItem="nme-23-Jp1" firstAttribute="trailing" secondItem="IMy-Hf-S8o" secondAttribute="trailing" id="qIK-r0-wMg"/>
+                            <constraint firstItem="nme-23-Jp1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="qvn-dC-rzI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="IMy-Hf-S8o" id="50W-Gd-OJl"/>
+                        <segue destination="0ju-HE-eDA" kind="show" identifier="toSecondVC" id="Xif-y4-xot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ITe-Al-rnf">
+            <objects>
+                <viewController id="0ju-HE-eDA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sn6-ru-7Ma">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş Başarılı..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M18-O6-e2L">
+                                <rect key="frame" x="109" y="335" width="175" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cix-B7-CZU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M18-O6-e2L" firstAttribute="centerY" secondItem="sn6-ru-7Ma" secondAttribute="centerY" id="SPh-P2-eId"/>
+                            <constraint firstItem="M18-O6-e2L" firstAttribute="leading" secondItem="Cix-B7-CZU" secondAttribute="leading" constant="109" id="TOy-bU-hkG"/>
+                            <constraint firstItem="M18-O6-e2L" firstAttribute="centerX" secondItem="sn6-ru-7Ma" secondAttribute="centerX" id="jE0-BD-SsB"/>
+                            <constraint firstItem="M18-O6-e2L" firstAttribute="top" secondItem="Cix-B7-CZU" secondAttribute="top" constant="335" id="oAA-N3-iEj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pLU-X8-M1m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1c-7q-MTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991.60305343511448" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
